@@ -36,20 +36,22 @@ const Botsito = () => {
     return (
         <Fragment>
             <Col>
-                <Row style={{backgroundColor:"white",width:"98vw",height:"40vw",borderRadius:"2%",border:"3px solid yellow", marginTop:"6px"}}>
+                <Row style={{backgroundColor:"white",width:"98vw",height:"40vw",borderRadius:"2%",border:"3px solid yellow", marginTop:"6px", padding:"2vw"}}>
                     {
-                        pantalla 
+                        <span style={{backgroundColor:"#14b8b8", borderRadius:"5%"}}>
+                            {pantalla}
+                        </span> 
                     }    
                 </Row>
                 <Row>
                     <Form onSubmit={submitForm}>
-                        <Form.Group>
+                        <Form.Group style={{marginTop:"2vw"}}>
                             <Form.Label style={{color:"#14b8b8"}}>Chatea:</Form.Label>
-                            <Form.Control type="text" placeholder="texto Completo" name='texto' onChange={handleChange} value={texto}/>
+                            <Form.Control style={{marginLeft:"2vw", width:"85vw"}} type="text" placeholder="texto Completo" name='texto' onChange={handleChange} value={texto}/>
+                            <Button variant="outline-success" style={{width:"5vw", marginLeft:"2vw"}} type='submit'>
+                                Enviar
+                            </Button>
                         </Form.Group>
-                        <Button variant='success' type='submit'>
-                            Enviar
-                        </Button>
                     </Form>
                     {
                         error
